@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { assets, dummyCarData } from '../../assets'
 import Title from '../../components/owner/Title'
 import type {carSchema} from '../../schemas'
+
+
 const ManageCars = () => {
 
-    const [cars, setCars] = useState([])
+    const [cars, setCars] = useState<carSchema[]>()
 
     const currency=import.meta.env.VITE_CURRENCY
     const fetchOwnerCars = async () => {
@@ -37,7 +39,7 @@ useEffect(() => {
         </thead>
 
         <tbody>
-        {cars.map((car:carSchema, index) => (
+        {cars?.map((car, index) => (
           <tr key={index} className='border-t border-borderColor'>
             {/* Car Details Column */}
             <td className='p-3 flex items-center gap-3'>
@@ -84,7 +86,7 @@ useEffect(() => {
 
   </div>
 
-</div>
+    </div>
   )
 }
 
