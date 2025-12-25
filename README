@@ -1,0 +1,28 @@
+
+
+pip install "fastapi[standard]"
+pip install argon2-cffi
+pip install python-dotenv
+pip install sqlalchemy
+pip install alembic
+pip install PyJWT cryptography 
+pip install imagekitio
+
+# USER ROLES
+pip install sqlalchemy-utils
+
+
+# Run app
+run the app :
+fastapi dev main.py 
+
+create the requiremen file:
+pip freeze > requirements.txt
+
+install requirements:
+pip install -r requirements.txt 
+
+
+
+# to see the version
+pip show Sqlalchemy-Utils
