@@ -1,4 +1,4 @@
-export type carSchema= {
+export interface carSchema {
         _id: string,
         owner:string,
         brand:string,
@@ -15,3 +15,15 @@ export type carSchema= {
         isAvaliable:boolean,
         createdAt: string
     }
+
+export interface bookingSChema{
+            _id:string,
+            car: carSchema,
+            user:string,
+            owner:string,
+            pickupDate:string,
+            returnDate:string,
+            status:string,
+            price:number,
+            createdAt:string,
+}
